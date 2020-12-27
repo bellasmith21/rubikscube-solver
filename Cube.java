@@ -70,7 +70,7 @@ public class Cube {
 	 	*U: 0, U2: 1, U': 2,   L: 3, L2: 4, L': 5,   F: 6, F2: 7, F': 8,
 	 	*R: 9, R2: 10, R': 11,   B: 12, B2: 13, B': 14,   D: 15, D2: 16, D': 17
 	 */
-	public void turnSide(int i) {
+	private void turnSide(int i) {
 		if(i != -1) {
 			solution.add(i);
 		}
@@ -133,7 +133,7 @@ public class Cube {
 		pll();
 		configureSolution();
 	}
-	public void cross() {
+	private void cross() {
 		int[] k = {1, 3, 4, 6, 9, 11, 12, 14, 17, 19, 20 , 22, 25, 27, 28, 30,
 				33, 35, 36, 38, 41, 43, 44, 46};
 		while(cube.get(41) != 6 || cube.get(43) != 6 ||
@@ -290,7 +290,7 @@ public class Cube {
 			}
 		}
 	}
-	public void fl() {
+	private void fl() {
 		//System.out.println("OrangeBlue: ");
 		int orangeBlue = flSearch(2, 3);
 		int[] obMoves = {2, 1, -1, 0, 5, 0, 3, 2, 6, 2, 8, 40, 1, 2, -1, 0, 5, 0, 3, 0, 1, 2, -1, 6, 2, 8};
@@ -463,7 +463,7 @@ public class Cube {
 	//edge find methods like with fl
 	private static int[][] secondLayer = {{8, 5, 6, 0, 6, 2, 8, 3},	{6, 3, 11, 17, 6, 15, 5, 9, 8},
 			{11, 8, 9, 0, 9, 2, 11, 6},	{14, 11, 12, 0, 12, 2, 14, 9},	{5, 14, 3, 0, 3, 2, 5, 12},	{9, 6, 14, 17, 9, 15, 8, 12, 11},	{12, 9, 5, 17, 12, 15, 11, 3, 14},	{3, 12, 8, 17, 3, 15, 14, 6, 5}, {}};
-	public void sl() {
+	private void sl() {
 		int orangeBlue = slSearch(2, 3);
 		int[] obMoves = {1, 0, -1, 2, 0, 12, -1, 0, 1, 2, 1, 12, 2, 1, 33};
 		while(orangeBlue != 12) {
@@ -580,7 +580,7 @@ public class Cube {
 			return ed;
 		}
 	}
-	static public int[][] OLL = {
+	static private int[][] OLL = {
 			 	{9, 1, 10, 6, 9, 8, 1, 11, 6, 9, 8},
 			 	{6, 9, 0, 11, 2, 8, 12, 0, 3, 2, 5, 14},
 			 	{12, 0, 3, 2, 5, 14, 2, 6, 9, 0, 11, 2, 8},
@@ -1002,7 +1002,7 @@ public class Cube {
 			turnSide(r[i]);
 		}
 	}
-	static public int[][] PLL = {
+	static private int[][] PLL = {
 				{10, 0, 9, 0, 11, 2, 11, 2, 11, 0, 11},
 				{9, 2, 9, 0, 9, 0, 9, 2, 11, 2, 10},
 				{10, 4, 15, 10, 4, 0, 11, 3, 7, 10, 4, 13, 11, 3, 1},
@@ -1540,7 +1540,7 @@ public class Cube {
 			}
 		}
 	}
-	public void configureSolution() {		
+	private void configureSolution() {		
 		for(int i = 0; i <= 15; i += 3) {
 			for(int k = 0; k < 3; k++) {
 				for(int j = 0; j < solution.size()-1; j++) {
