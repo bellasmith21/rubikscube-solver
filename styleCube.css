@@ -1,0 +1,141 @@
+/*
+OVERALL STYLES
+*/
+
+body{
+	background: rgb(0,0,0);
+	background: linear-gradient(0deg, rgba(255,0,0,1) 0%, rgba(5,5,5,1) 1%, rgba(5,5,5,1) 99%, rgba(255,0,0,1) 100%);
+	margin: 0;
+    padding: 0;
+	font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+}
+::-moz-selection {
+  background: #F42323;
+  color: #fff;
+  text-shadow: none;
+}
+
+::selection {
+  background: #F42323;
+  color: #fff;
+  text-shadow: none;
+}
+
+
+
+/*
+CUBE STYLES
+*/
+.cube{
+	width: 240px;
+	height: 360px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 100px;
+	position: relative;
+	
+	transform-style:  preserve-3d;
+	transform: rotateX(-35deg) rotateY(-30deg) ;
+	transition: linear 0.5s;
+}
+
+.box{
+    width: 240px;
+    height: 240px;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 2px;
+    position: absolute;
+}
+
+.green{
+	transform:  rotateX(0deg) translateZ(120px);
+}
+
+.blue{
+	transform:  rotateX(180deg) translateZ(120px);
+}
+
+.red{
+	transform:  rotateY(-90deg) translateZ(120px) rotate(-90deg); 
+}
+
+.orange{
+	transform:  rotateY(90deg) translateZ(120px) rotate(90deg);
+}
+
+.yellow{
+	transform:  rotateX(90deg) translateZ(120px);
+}
+
+.white{
+	transform:  rotateX(-90deg) translateZ(120px);
+}
+
+.item{
+	height: 100%;
+	width: 100%;
+	border-radius: 7px;
+	box-sizing: border-box;
+}
+
+
+
+
+/*
+CUBE ANIMATIONS
+*/
+@keyframes spin {
+	from {
+		transform: rotateY(0deg) rotateX(-19deg);
+	}
+	to {
+		transform: rotateY(360deg) rotateX(-19deg);
+	}
+}
+
+.cube {
+	animation: spin 6.5s infinite linear;
+}
+
+
+
+/*
+NAVIGATION AND BUTTONS
+*/
+#button-pannel{
+	width: 100%;
+	background: #0A0A0A;
+}
+button {
+	font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+	width: 10rem;
+	height: 3rem;
+	color: #FFFFFF;
+	background: #D01A1A;
+	font-size: 18px;
+	text-align: center;
+	border: none;
+	border-radius: 5px;
+}
+#container1, #container2{
+	width: 49%;
+	margin-bottom: 5px;
+}
+#container2, #shufflebtn{
+	float: right;
+}
+#container1, #solvebtn{
+	float: left;
+}
+p:hover{
+	color: #D01A1A;
+}
+button:hover{
+	background-color: #F45050; 
+}
+footer{
+	color:#ffffff;
+}
