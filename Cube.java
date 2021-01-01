@@ -1580,6 +1580,7 @@ public class Cube {
 		Cube c = new Cube();
 		c.shuffle();
 		c.solve();
-		//ArrayList<Integer> solution = c.solution;
+		ArrayList<Integer> shuffle = c.shuffle;
+		ArrayList<Integer> solution = c.solution;
 	}
 }
