@@ -4,7 +4,7 @@ rubikscube-solver is a Java based algorithm that shuffles and solves a Rubik's c
 
 ## Explanation
 
-This project solves a Rubik's cube with the CFOP method (cross, first two layers, orient last layer, and permute last layer); the same process I use to solve a cube in real life.  The algorithm returns a solution in the form of an array of moves on the cube.  In running 1 million cubes, the average solution length was 105 moves, and the percent of successfully solved cube solutions was %.
+This project solves a Rubik's cube with the CFOP method (cross, first two layers, orient last layer, and permute last layer); the same process I use to solve a cube in real life.  The algorithm returns a solution in the form of an array of moves on the cube.  In running 1 million cubes, the average solution length was 105 moves, with a 100% successful solve rate.
 
 ## Build status
 
